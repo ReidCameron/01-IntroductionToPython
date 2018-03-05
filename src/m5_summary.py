@@ -37,7 +37,7 @@ sam.pen = rg.Pen('orange', 3)
 sam.speed = 2  # Slow
 
 ## creates a triangle path for sam
-mult = 45 #adjusts size of triangle
+mult = 30 #adjusts size of triangle
 sam.left(143)
 sam.forward(5*mult)
 sam.left(127)
