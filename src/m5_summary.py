@@ -2,15 +2,15 @@
 An exercise that summarizes what you have learned in this Session.
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
+         their colleagues and Cameron Reid.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #   Write code that constructs a SimpleTurtle with a red Pen
 #   and makes it move around a bit.  Don't forget to:
 #     -- import rosegraphics and construct a TurtleWindow
@@ -26,4 +26,23 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 #
 #   As always, COMMIT-and-PUSH when you are done with this module.
 #
-###############################################################################
+#########################################################################
+
+import rosegraphics as rg
+
+window = rg.TurtleWindow()
+
+sam = rg.SimpleTurtle('turtle')
+sam.pen = rg.Pen('orange', 3)
+sam.speed = 2  # Slow
+
+## creates a triangle path for sam
+mult = 45 #adjusts size of triangle
+sam.left(143)
+sam.forward(5*mult)
+sam.left(127)
+sam.forward(3*mult)
+sam.left(90)
+sam.forward(4*mult)
+
+window.close_on_mouse_click()
